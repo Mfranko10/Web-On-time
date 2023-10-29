@@ -31,7 +31,9 @@ header,
 .search-container,
 #form,
 .information-container,
+.information-child,
 .information-child h2,
+.information-button,
 #video,
 .kit-container,
 .benefits-container,
@@ -61,7 +63,7 @@ header {
 }
 nav {
     background-color: var(--background-detail-color);
-    box-shadow: 0 0 40px -13px var(--box-shadow-color);
+    box-shadow: 0 0 30px -13px var(--box-shadow-color);
     border-radius: 20px;
     width: 98%;
 }
@@ -159,6 +161,8 @@ nav {
     margin: 200px 0;
 }
 .information-child {
+    flex-direction: column;
+    justify-content: space-between;
     width: 400px;
     height: 500px;
     border: 2px solid var(--border-color-kit);
@@ -168,6 +172,7 @@ nav {
     color: var(--black-color-text);
 }
 .information-child h2 {
+    width: 100%;
     height: 110px;
     font-family: var(--title-font);
     font-size: 1.9rem;
@@ -178,12 +183,42 @@ nav {
 }
 .information-child p {
     width: 100%;
-    margin: 40px 0 0;
+    margin: 30px 0 0;
     font-size: 1.4rem;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 7;
+    -webkit-line-clamp: 6;
     overflow: hidden;
+}
+.information-button {
+    position: relative;
+    background-color: var(--background-color-button);
+    border: 1px solid var(--border-button-color);
+    font-size: 20px;
+    padding: 10px 50px;
+    font-weight: bold;
+    color: var(--white-color-text);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all .2s ease;
+    overflow: hidden;
+}
+.information-button:hover {
+    background-color: var(--background-hover-color-button);
+    color: var(--black-color-text);
+}
+.information-button::after {
+    position: absolute;
+    content: ">";
+    font-size: 1.6rem;
+    right: 25px;
+    transform: translateX(50px);
+    transition: .5s ease;
+    color: var(--white-color-text);
+}
+.information-button:hover::after {
+    transform: translateX(0px);
+    color: var(--black-color-text);
 }
 
 /* *Video Section */
@@ -224,7 +259,7 @@ nav {
     background-color: var(--background-color-button);
     transform: rotateZ(50deg);
     color: var(--white-color-text);
-    font-size: 18px;
+    font-size: 1.3rem;
     font-weight: bold;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     z-index: -1;
@@ -360,14 +395,17 @@ footer {
     .information-container {
         flex-direction: column;
         padding: 10px 30px;
-        row-gap: 20px;
+        row-gap: 30px;
     }
     .information-child {
-        width: 90%;
+        width: 70%;
         height: 400px;
     }
     .information-child h2 {
         height: 120px;
+    }
+    .information-child p {
+        -webkit-line-clamp: 3;
     }
     #video iframe {
         width: 80%;
@@ -385,20 +423,26 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
+    .search-title {
+        font-size: 30px;
+    }
     #email {
         width: 200px;
     }
     .information-container {
         flex-direction: column;
         padding: 10px 30px;
-        row-gap: 20px;
+        row-gap: 30px;
     }
     .information-child {
         width: 90%;
-        height: 400px;
+        height: 420px;
+    }
+    .information-child h2 {
+        font-size: 1.5rem;
     }
     .information-child p {
-        -webkit-line-clamp: 5;
+        -webkit-line-clamp: 4;
     }
     #video iframe {
         width: 90%;
