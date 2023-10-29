@@ -13,16 +13,21 @@
     <!-- Font family -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ubuntu&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous" />
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
   </head>
   <body id="web-container">
     <header>
@@ -38,14 +43,16 @@
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasDarkNavbar"
             aria-controls="offcanvasDarkNavbar"
-            aria-label="Toggle navigation">
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div
             class="offcanvas offcanvas-end"
             tabindex="-1"
             id="offcanvasDarkNavbar"
-            aria-labelledby="offcanvasDarkNavbarLabel">
+            aria-labelledby="offcanvasDarkNavbarLabel"
+          >
             <div class="offcanvas-header">
               <div class="offcanvas-logo">
                 <img src="./image/logo.ico" alt="Logo " />
@@ -72,10 +79,11 @@
                     href="#"
                     role="button"
                     data-bs-toggle="dropdown"
-                    aria-expanded="false">
+                    aria-expanded="false"
+                  >
                     Información
                   </a>
-                  <ul class="dropdown-menu dropdown-menu">
+                  <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Ubicación</a></li>
                     <li><a class="dropdown-item" href="#">Destinos</a></li>
                     <li>
@@ -97,12 +105,9 @@
           type="email"
           placeholder="Digita tu correo electronico"
           required
-          id="email" />
-        <input
-          type="button"
-          value="Consultar"
-          id="submit"
-          class="btn" />
+          id="email"
+        />
+        <input type="button" value="Consultar" id="submit" class="btn" />
       </form>
     </section>
     <section class="information-container">
@@ -157,6 +162,7 @@
         <a href="#" class="button-kit">Seleccionar</a>
       </div>
       <div class="kit-container kit-vip">
+        <p class="more-buy-kit">La mas vendida</p>
         <h2 class="title-kit">Entrega VIP</h2>
         <p class="price-kit">$199</p>
         <div class="benefits-container">
@@ -182,6 +188,15 @@
       </div>
     </section>
     <footer>
+      <div class="button-mode-dark">
+        <input id="checkbox_toggle" type="checkbox" class="check" />
+        <div class="checkbox">
+          <label class="slide" for="checkbox_toggle">
+            <label class="toggle" for="checkbox_toggle"></label>
+            <label class="text-modedark" for="checkbox_toggle">Dark</label>
+          </label>
+        </div>
+      </div>
       <div class="left-footer">
         <a href="#" class="link-footer">Privacidad</a>
         <a href="#" class="link-footer">Terminos y condiciones</a>
@@ -189,7 +204,11 @@
       </div>
       <div class="right-footer">
         <p class="copyright">
-          <b><em>Copyright <span class="year-copyright">2023</span> &copy;</em></b>
+          <b
+            ><em
+              >Copyright <span class="year-copyright">2023</span> &copy;</em
+            ></b
+          >
         </p>
       </div>
     </footer>
@@ -200,5 +219,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>
